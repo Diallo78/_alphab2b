@@ -20,7 +20,7 @@ public class Commande extends AbstractEntity{
     private OrderStatus orderStatus;
     private PaymentMethode paymentMethode;
     private OrderType orderType;
-
+    private String businessCode;
     @ManyToOne
     @JoinColumn(name = "client_id", nullable = false)
     private Client client; // plusieur commande appartient a un client

@@ -16,6 +16,7 @@ public class CategoryDto {
     private String code;
     private String name;
     private String description;
+    private String businessCode;
     @JsonIgnore
     private Set<ArticleDto> articles;
 
@@ -30,6 +31,7 @@ public class CategoryDto {
                 .code(category.getCode())
                 .name(category.getName())
                 .description(category.getDescription())
+                .businessCode(category.getBusinessCode())
                 .build();
     }
 
@@ -45,7 +47,7 @@ public class CategoryDto {
         category.setCode(categoryDto.getCode());
         category.setName(categoryDto.getName());
         category.setDescription(categoryDto.getDescription());
-
+        category.setBusinessCode(categoryDto.getBusinessCode());
         return category;
     }
 

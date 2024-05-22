@@ -19,7 +19,7 @@ public class CommandeItem extends AbstractEntity{
     private Integer quantity;
     private BigDecimal unitPriceHt;
     private BigDecimal totalPrice;
-
+    private String businessCode;
     @ManyToOne
     @JoinColumn(name = "commande_id", nullable = false)
     private Commande commande;

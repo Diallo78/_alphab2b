@@ -17,7 +17,7 @@ public class SalesLine extends AbstractEntity {
     private String code;
     private Integer quantity;
     private BigDecimal unitPrinceHt;
-
+    private String businessCode;
     @ManyToOne
     @JoinColumn(name = "sales_id")
     private Sales sales;

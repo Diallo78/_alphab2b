@@ -19,7 +19,6 @@ public class Client extends AbstractEntity{
     private String lastName;
     private String firstName;
     private String photo;
-
     @Embedded
     private Address address;
 

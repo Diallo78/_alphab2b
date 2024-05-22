@@ -22,7 +22,7 @@ public class Customer extends AbstractEntity{
     private Instant dateOfBirth;
     private String mdp;
     private String photo;
-
+    private String businessCode;
     @Embedded
     private Address address;
 

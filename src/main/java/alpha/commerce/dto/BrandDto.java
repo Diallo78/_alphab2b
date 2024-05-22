@@ -14,6 +14,7 @@ import java.util.Set;
 public class BrandDto {
     private Long id;
     private String nom; // Brand(Marque) name
+    private String businessCode;
     @JsonIgnore
     private Set<ArticleDto> articles;
 
@@ -26,6 +27,7 @@ public class BrandDto {
                 BrandDto.builder()
                         .id(brand.getId())
                         .nom(brand.getNom())
+                        .businessCode(brand.getBusinessCode())
                         .build();
     }
 
@@ -37,6 +39,7 @@ public class BrandDto {
         Brand brand = new Brand();
         brand.setId(brandDto.getId());
         brand.setNom(brandDto.getNom());
+        brand.setBusinessCode(brandDto.getBusinessCode());
 
         return brand;
     }

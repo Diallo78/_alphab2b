@@ -15,7 +15,7 @@ public class Brand extends AbstractEntity{
     @NotNull(message = "Unit price is mandatory")
     @Column(nullable = false)
     private String nom; // Brand(Marque) name
-
+    private String businessCode;
     @OneToMany(mappedBy = "brand")
     private Set<Article> articles;
 }

@@ -20,7 +20,7 @@ public class ArticleDto {
     private CategoryDto category;
     private String image;
     private BrandDto brand; // marque
-
+    private String businessCode;
     public static ArticleDto formEntity(Article article){
 
         if(article == null){
@@ -39,6 +39,7 @@ public class ArticleDto {
                 .vatRate(article.getVatRate())
                 .image(article.getImage())
                 .brand(BrandDto.fromEntity(article.getBrand()))
+                .businessCode(article.getBusinessCode())
                 .build();
     }
 
@@ -60,6 +61,7 @@ public class ArticleDto {
         article.setVatRate(dto.getVatRate());
         article.setImage(dto.getImage());
         article.setBrand(BrandDto.toEntity(dto.getBrand()));
+        article.setBusinessCode(dto.getBusinessCode());
         return article;
 
     }

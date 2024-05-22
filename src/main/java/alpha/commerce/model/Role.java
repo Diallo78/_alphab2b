@@ -14,7 +14,7 @@ public class Role extends AbstractEntity{
 
     @Column(nullable = false)
     private String nameRole;
-
+    private String businessCode;
     @ManyToMany(mappedBy = "roles")
     private List<Customer> customers;
 }

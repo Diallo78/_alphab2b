@@ -21,7 +21,7 @@ public class Fournisseur extends AbstractEntity{
     @Column(nullable = false, length = 100)
     private String firstName;
     private String photo;
-
+    private String businessCode;
     @Embedded
     private Address address;
 

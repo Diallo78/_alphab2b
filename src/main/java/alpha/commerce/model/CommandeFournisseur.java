@@ -27,7 +27,7 @@ public class CommandeFournisseur extends AbstractEntity{
     private OrderStatus orderStatus;
     private PaymentMethode paymentMethode;
     private OrderType orderType;
-
+    private String businessCode;
     @ManyToOne
     @JoinColumn(name = "fournisseur_id")
     private Fournisseur fournisseur;

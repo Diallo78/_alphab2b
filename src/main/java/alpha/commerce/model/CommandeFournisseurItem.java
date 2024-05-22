@@ -18,7 +18,7 @@ public class CommandeFournisseurItem extends AbstractEntity{
     private String code;
     private BigDecimal quantity;
     private BigDecimal unitPrince;
-
+    private String businessCode;
     @ManyToOne
     @JoinColumn(name = "fournisseur_id", nullable = false)
     private CommandeFournisseur cmdFournisseur;

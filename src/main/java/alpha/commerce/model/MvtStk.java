@@ -18,7 +18,7 @@ public class MvtStk extends AbstractEntity{
     private Instant dateMvt;
     private BigDecimal quantity;
     private TypeMvtStk typeMvtStk;
-
+    private String businessCode;
     @ManyToOne
     @JoinColumn(name = "article_id")
     private Article article;

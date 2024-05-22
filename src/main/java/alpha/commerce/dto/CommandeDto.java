@@ -22,7 +22,7 @@ public class CommandeDto {
     private OrderStatus orderStatus;
     private PaymentMethode paymentMethode;
     private OrderType orderType;
-
+    private String businessCode;
     private ClientDto client;
     @JsonIgnore
     private List<CommandeItemDto> commandeItems;
@@ -39,6 +39,7 @@ public class CommandeDto {
                 .orderStatus(commande.getOrderStatus())
                 .paymentMethode(commande.getPaymentMethode())
                 .orderType(commande.getOrderType())
+                .businessCode(commande.getBusinessCode())
                 .client(ClientDto.fromEntity(commande.getClient()))
                 .build();
     }
@@ -56,6 +57,7 @@ public class CommandeDto {
         commande.setPaymentMethode(dto.getPaymentMethode());
         commande.setOrderType(dto.getOrderType());
         commande.setClient(ClientDto.toEntity(dto.getClient()));
+        commande.setBusinessCode(dto.getBusinessCode());
         return commande;
     }
 }

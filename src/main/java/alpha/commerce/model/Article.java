@@ -23,6 +23,8 @@ public class Article extends AbstractEntity{
     private BigDecimal unitPriceTtc;
     private String image;
 
+    private String businessCode; // attribut technique pour faciliter la recher
+
     @ManyToOne
     @JoinColumn(name = "category_id", nullable = false)
     private Category category;
