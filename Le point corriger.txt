@@ -1,0 +1,21 @@
+Le point corriger
+1 - Address (entity end dto)
+2 - Article (entity end dto)
+3 - Category (entity end dto)
+======== Client ===========
+4 - Client (entity end dto)
+5 - Commande (entity end dto)
+6 - CommandeItem (entity end dto)
+======= Fournisseur =========
+7 - Fournisseur (entity end dto)
+8 - CommandeFournisseur (entity end dto)
+9 - CommandeFournisseurItem (entity end dto)
+
+====== Ventes sales ===========
+10 - SalesLine (entity end dto non finish)
+10 - Sales (entity end dto)
+
+====== MvtStk sales ===========
+11 - MvtStk (entity end dto non finish)
+
+12 - Business (entity end dto)

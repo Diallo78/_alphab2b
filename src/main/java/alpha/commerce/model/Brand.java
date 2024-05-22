@@ -1,0 +1,21 @@
+package alpha.commerce.model;
+
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
+import lombok.*;
+
+import java.util.Set;
+
+@Entity
+@Getter @Setter @EqualsAndHashCode(callSuper = true)
+@ToString @AllArgsConstructor @NoArgsConstructor @Builder
+@Table(name = "brand")
+public class Brand extends AbstractEntity{
+
+    @NotNull(message = "Unit price is mandatory")
+    @Column(nullable = false)
+    private String nom; // Brand(Marque) name
+
+    @OneToMany(mappedBy = "brand")
+    private Set<Article> articles;
+}
