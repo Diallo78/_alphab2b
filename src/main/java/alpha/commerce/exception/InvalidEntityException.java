@@ -10,7 +10,7 @@ import java.util.List;
     Logique : Dto -> Entity (Front-end -> Back-end)
  */
 public class InvalidEntityException extends RuntimeException{
-    
+
     @Getter
     private ErrorCodes errorCodes;
     @Getter

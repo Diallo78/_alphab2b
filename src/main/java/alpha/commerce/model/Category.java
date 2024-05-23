@@ -5,7 +5,7 @@ import lombok.*;
 import java.util.List;
 
 @Entity
-@Getter @Setter @EqualsAndHashCode @ToString
+@Getter @Setter @EqualsAndHashCode(callSuper = true) @ToString
 @AllArgsConstructor @NoArgsConstructor @Builder
 @Table(name = "category")
 public class Category extends AbstractEntity{
