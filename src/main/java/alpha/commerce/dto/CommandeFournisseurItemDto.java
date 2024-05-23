@@ -15,7 +15,7 @@ public class CommandeFournisseurItemDto {
     private String code;
     private BigDecimal quantity;
     private BigDecimal unitPrince;
-
+    private String businessCode;
     private CommandeFournisseurDto cmdFournisseur;
     private ArticleDto article;
 

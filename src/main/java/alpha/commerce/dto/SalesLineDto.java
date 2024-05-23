@@ -17,7 +17,7 @@ public class SalesLineDto {
     private BigDecimal unitPrinceHt;
 
     private SalesDto sales;
-
+    private String businessCode;
     public static SalesLineDto fromEntity(SalesLine line){
         if (line == null){
             return null;

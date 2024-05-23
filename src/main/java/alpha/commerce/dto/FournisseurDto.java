@@ -18,6 +18,7 @@ public class FournisseurDto {
     private String firstName;
     private String photo;
     private AddressDto address;
+    private String businessCode;
     @JsonIgnore
     private List<CommandeFournisseurDto> commandeFournisseurs;
 

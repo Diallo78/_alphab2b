@@ -18,7 +18,7 @@ public class CommandeItemDto {
     private BigDecimal totalPrice;
     private CommandeDto commande;
     private ArticleDto article;
-
+    private String businessCode;
     public static CommandeItemDto fromEntity(CommandeItem item){
         if (item == null){
             return null;
