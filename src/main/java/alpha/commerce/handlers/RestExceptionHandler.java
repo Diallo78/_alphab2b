@@ -13,7 +13,7 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(EntityNotFoundException.class)
     public ResponseEntity<ErrorDto> handleException(EntityNotFoundException exception, WebRequest webRequest){
-        final HttpStatus noteFound = HttpStatus.FOUND;
+        final HttpStatus noteFound = HttpStatus.NOT_FOUND;
         final ErrorDto errorDto =  ErrorDto.builder()
                 .codes(exception.getErrorCodes())
                 .httpCode(noteFound.value())

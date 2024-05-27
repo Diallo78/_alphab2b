@@ -10,20 +10,18 @@ import java.util.List;
 
 @Entity
 @Getter
-@Setter @EqualsAndHashCode @ToString
+@Setter @EqualsAndHashCode(callSuper = true) @ToString
 @AllArgsConstructor
 @NoArgsConstructor @Builder
 @Table(name = "fournisseur")
 public class Fournisseur extends AbstractEntity{
     private String code;
-    @Column(nullable = false, length = 30)
     private String lastName;
-    @Column(nullable = false, length = 100)
     private String firstName;
     private String photo;
-    private String businessCode;
     @Embedded
     private Address address;
+    private String businessCode;
 
     @OneToMany(mappedBy = "fournisseur")
     private List<CommandeFournisseur> commandeFournisseurs;

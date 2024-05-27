@@ -6,15 +6,16 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface ArticleRepository extends JpaRepository<Article, Long> {
     // requete JPQL
-    @Query("select a from Article where code = :code and nameProduct = :nameProduct")
-    public List<Article> findByCustomerQuery(@Param("code") String c, @Param("nameProduct") String name);
 
     // requete Native
     @Query(value = "select * from article where code = :code and nameProduct = :nameProduct", nativeQuery = true)
     public List<Article> findByCustomerNativeQuery(@Param("code") String c, @Param("nameProduct") String name);
 
-    List<Article> findByCodeIgnoreCaseAndNameProductIgnoreCase(String code, String nameProduct);
+    public List<Article> findByCodeIgnoreCaseAndNameProductIgnoreCase(String code, String nameProduct);
+
+    public Optional<Article> findArticleByCode(String code);
 }

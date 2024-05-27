@@ -35,6 +35,7 @@ public class FournisseurDto {
                 .firstName(fournisseur.getFirstName())
                 .photo(fournisseur.getPhoto())
                 .address(AddressDto.fromEntity(fournisseur.getAddress()))
+                .businessCode(fournisseur.getBusinessCode())
                 .build();
     }
 
@@ -51,7 +52,7 @@ public class FournisseurDto {
         fournisseur.setFirstName(dto.getFirstName());
         fournisseur.setPhoto(dto.getPhoto());
         fournisseur.setAddress(AddressDto.toEntity(dto.getAddress()));
-
+        fournisseur.setBusinessCode(dto.getBusinessCode());
         return fournisseur;
     }
 }
