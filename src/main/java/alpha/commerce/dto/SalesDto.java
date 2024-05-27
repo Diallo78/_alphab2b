@@ -15,7 +15,7 @@ public class SalesDto {
     private String code;
     private Instant dateSales;
     private String comment; // commantaire
-
+    private String businessCode;
     public static SalesDto formEntity(Sales sales){
         if (sales == null){
             return null;

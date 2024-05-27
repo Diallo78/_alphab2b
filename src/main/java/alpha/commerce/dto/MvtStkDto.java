@@ -20,7 +20,7 @@ public class MvtStkDto {
     private TypeMvtStk typeMvtStk;
 
     private ArticleDto article;
-
+    private String businessCode;
     public static MvtStkDto fromEntity(MvtStk mvtStk){
         if (mvtStk == null){
             return null;

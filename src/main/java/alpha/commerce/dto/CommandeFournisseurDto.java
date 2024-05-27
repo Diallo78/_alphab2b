@@ -24,6 +24,7 @@ public class CommandeFournisseurDto {
     private PaymentMethode paymentMethode;
     private OrderType orderType;
     private FournisseurDto fournisseur;
+    private String businessCode;
     @JsonIgnore
     private List<CommandeFournisseurItemDto> ligneCommandeFournisseurs;
 
@@ -39,6 +40,7 @@ public class CommandeFournisseurDto {
                 .paymentMethode(fournisseur.getPaymentMethode())
                 .orderType(fournisseur.getOrderType())
                 .fournisseur(FournisseurDto.FromEntity(fournisseur.getFournisseur()))
+                .businessCode(fournisseur.getBusinessCode())
                 .build();
     }
 
@@ -54,7 +56,7 @@ public class CommandeFournisseurDto {
         cmdFour.setPaymentMethode(dto.getPaymentMethode());
         cmdFour.setOrderType(dto.getOrderType());
         cmdFour.setFournisseur(FournisseurDto.toEntity(dto.getFournisseur()));
-
+        cmdFour.setBusinessCode(dto.getBusinessCode());
         return cmdFour;
     }
 }

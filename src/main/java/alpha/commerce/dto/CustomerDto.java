@@ -38,6 +38,8 @@ public class CustomerDto {
                 .dateOfBirth(customer.getDateOfBirth())
                 .mdp(customer.getMdp())
                 .photo(customer.getPhoto())
+                .address(AddressDto.fromEntity(customer.getAddress()))
+                .business(BusinessDto.fromEntity(customer.getBusiness()))
 //                .roles(customer.getRoles() != null ?
 //                        customer.getRoles().stream()
 //                                .map(rol -> RoleDto.formEntity(rol))
@@ -63,6 +65,8 @@ public class CustomerDto {
         customer.setDateOfBirth(dto.getDateOfBirth());
         customer.setMdp(dto.getMdp());
         customer.setPhoto(dto.getPhoto());
+        customer.setAddress(AddressDto.toEntity(dto.getAddress()));
+        customer.setBusiness(BusinessDto.toEntity(dto.getBusiness()));
         customer.setRoles(Collections.singletonList(RoleDto.toEntity((RoleDto) dto.getRoles())));
         return customer;
     }

@@ -18,6 +18,7 @@ public class FournisseurDto {
     private String firstName;
     private String photo;
     private AddressDto address;
+    private String businessCode;
     @JsonIgnore
     private List<CommandeFournisseurDto> commandeFournisseurs;
 
@@ -34,6 +35,7 @@ public class FournisseurDto {
                 .firstName(fournisseur.getFirstName())
                 .photo(fournisseur.getPhoto())
                 .address(AddressDto.fromEntity(fournisseur.getAddress()))
+                .businessCode(fournisseur.getBusinessCode())
                 .build();
     }
 
@@ -50,7 +52,7 @@ public class FournisseurDto {
         fournisseur.setFirstName(dto.getFirstName());
         fournisseur.setPhoto(dto.getPhoto());
         fournisseur.setAddress(AddressDto.toEntity(dto.getAddress()));
-
+        fournisseur.setBusinessCode(dto.getBusinessCode());
         return fournisseur;
     }
 }

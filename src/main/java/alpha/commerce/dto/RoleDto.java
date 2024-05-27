@@ -16,6 +16,7 @@ import java.util.List;
 public class RoleDto {
     private Long id;
     private String nameRole;
+    private String businessCode;
     @JsonIgnore
     private List<Customer> customers;
 

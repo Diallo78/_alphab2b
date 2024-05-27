@@ -10,13 +10,19 @@ public class ClientValidator {
     public static List<String> validateClient(ClientDto dto){
         List<String> errors = new ArrayList<>();
         if (dto == null){
-
+            errors.add("Le champ `code` est obligatoire.");
+            errors.add("Le champ `Last Name` est obligatoire.");
+            errors.add("Le champ `First Name` est obligatoire.");
+            errors.add("Le champ `Code Business` est obligatoire.");
         }else {
             // code
             if (!MyValidator.isEmpty(dto.getCode())){
                 errors.add("Le champ `code` est obligatoire.");
             }
 
+            if (dto.getBusinessCode() == null){
+                errors.add("Le champ `Code Business` est obligatoire.");
+            }
             // lastName
             if (!MyValidator.isValidEmail(dto.getLastName())){
                 errors.add("Le champ `Last Name` est obligatoire.");
@@ -49,10 +55,10 @@ public class ClientValidator {
 
             // Address
             if (dto.getAddress() == null){
-
-            }
-            else{
-
+                errors.add("Address is mandatory.");
+            }else {
+                List<String> addressErrors = AddressValidator.validateAddress(dto.getAddress());
+                errors.addAll(addressErrors);
             }
 
         }
